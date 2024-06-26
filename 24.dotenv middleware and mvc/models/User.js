@@ -9,3 +9,5 @@ const user = [{
     password: '3454'
 }
 ]
+
+module.exports = user

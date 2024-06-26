@@ -21,13 +21,13 @@ app.use(express.json())
 
 app.use((req, res, next) => {
     console.log(req.method, req.url, new Date().toTimeString());
-    // next();
-    if (req.body && req.body.name === 'waseem') {
-        next();
-    }
-    else {
-        res.send('not allowed')
-    }
+    next();
+    // if (req.body && req.body.name === 'waseem') {
+    //     next();
+    // }
+    // else {
+    //     res.send('not allowed')
+    // }
 })
 
 app.use('/api', mainRouter);
