@@ -12,6 +12,7 @@ console.log(typeof postRouter); // Should print 'function'
 
 const app = express();
 app.use(express.json())
+const dbConnect = require('./dbConnect');
 
 // Ensure the router is correctly imported and used
 
@@ -42,6 +43,13 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT;
 const API_KEY = process.env.SECRET_API_KEY;
 
+dbConnect();
+
 app.listen(PORT, () => {
     console.log('app listening on port', PORT, API_KEY);
 });
+
+
+
+
+
