@@ -33,7 +33,7 @@ const loginController = async (req, res) => {
     console.log('loginController');
 
     const email = req.body.email;
-    const password = req.body.password;
+    const password = req.body.password
 
     if (!email || !password) {
         res.status(403).send('email and password required')

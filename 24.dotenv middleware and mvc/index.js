@@ -17,7 +17,6 @@ const dbConnect = require('./dbConnect');
 // Ensure the router is correctly imported and used
 
 // function middleWare1(req,res,next){
-
 // }
 
 app.use((req, res, next) => {
@@ -48,6 +47,13 @@ dbConnect();
 app.listen(PORT, () => {
     console.log('app listening on port', PORT, API_KEY);
 });
+
+
+
+
+
+
+
 
 
 
